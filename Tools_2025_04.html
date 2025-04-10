@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Technology Radar vol 32 - Tools</title>
+    <style>
+        table { border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .ring-header { font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <h1>Technology Radar vol 32 - Tools</h1>
+
+    <h2>Сводка разделов</h2>
+    <h3>Radar at a glance</h3>
+    <p>Радар использует четыре кольца для оценки технологий:</p>
+    <ul>
+        <li><strong>Adopt (Принять)</strong>: Технологии, которые рекомендуется использовать в проектах.</li>
+        <li><strong>Trial (Опробовать)</strong>: Стоит изучить и внедрить в небольших проектах.</li>
+        <li><strong>Assess (Оценить)</strong>: Требуют анализа их влияния на организацию.</li>
+        <li><strong>Hold (Приостановить)</strong>: Использовать с осторожностью или избегать.</li>
+    </ul>
+
+    <h3>Основные темы</h3>
+    <ul>
+        <li>Ускорение возможностей кодовых ассистентов (например, Cursor, Cline).</li>
+        <li>Эволюция наблюдаемости с акцентом на LLM и интеграцию AI.</li>
+        <li>Развитие RAG-подходов (GraphRAG, FastGraphRAG).</li>
+        <li>Управление сложными данными через Data Product Thinking.</li>
+    </ul>
+
+    <h2>Таблицы инструментов по кольцам</h2>
+
+    <!-- Adopt -->
+    <h3 class="ring-header">Adopt (Принять)</h3>
+    <table>
+        <tr>
+            <th>Инструмент</th>
+            <th>Связанные инструменты</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>51. Renovate</td>
+            <td>Dependabot, GitHub</td>
+            <td>Менеджер зависимостей для автоматизации обновлений. Рекомендуется для прозрачного управления версиями.</td>
+        </tr>
+        <tr>
+            <td>52. uv</td>
+            <td>Python, Rust, Poetry, pyenv, pipx</td>
+            <td>Высокопроизводительный менеджер пакетов для Python, написанный на Rust. Заменяет Poetry и pipx.</td>
+        </tr>
+        <tr>
+            <td>53. Vite</td>
+            <td>Vue, SvelteKit, React</td>
+            <td>Инструмент для быстрой сборки фронтенд-приложений. Рекомендуется как стандарт для новых проектов.</td>
+        </tr>
+    </table>
+
+    <!-- Trial -->
+    <h3 class="ring-header">Trial (Опробовать)</h3>
+    <table>
+        <tr>
+            <th>Инструмент</th>
+            <th>Связанные инструменты</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>54. Claude Sonnet</td>
+            <td>GitHub Copilot, OpenAI, VS Code</td>
+            <td>Модель для генерации кода и анализа данных. Интегрируется с IDE и браузерами.</td>
+        </tr>
+        <tr>
+            <td>55. Cline</td>
+            <td>VS Code, OpenRouter, MCP</td>
+            <td>AI-ассистент для разработки через чат. Поддерживает агентные режимы и интеграции.</td>
+        </tr>
+        <tr>
+            <td>56. Cursor</td>
+            <td>GitHub Copilot, VS Code, Ollama</td>
+            <td>AI-ориентированный редактор кода с автоисправлением ошибок и управлением через чат.</td>
+        </tr>
+        <tr>
+            <td>57. D2</td>
+            <td>Mermaid, D3.js</td>
+            <td>Инструмент для создания диаграмм через текстовый DSL. Альтернатива Mermaid.</td>
+        </tr>
+        <tr>
+            <td>58. Databricks Delta Live Tables</td>
+            <td>Apache Spark, Delta Lake</td>
+            <td>Декларативный подход к управлению пайплайнами данных в Databricks.</td>
+        </tr>
+        <tr>
+            <td>59. JSON Crack</td>
+            <td>Visual Studio Code, YAML, XML</td>
+            <td>Визуализация JSON/YAML/XML данных в виде графов. Удобен для анализа сложных структур.</td>
+        </tr>
+        <tr>
+            <td>60. MailSlurp</td>
+            <td>Postman, Selenium</td>
+            <td>Инструмент для тестирования email-взаимодействий и автоматизации интеграций.</td>
+        </tr>
+        <tr>
+            <td>61. Metabase</td>
+            <td>Tableau, Grafana</td>
+            <td>Open-source BI-инструмент для визуализации данных и создания дашбордов.</td>
+        </tr>
+        <tr>
+            <td>62. NeMo Guardrails</td>
+            <td>NVIDIA, LLM, RAG</td>
+            <td>Инструмент для защиты LLM-приложений от ошибок и некорректных запросов.</td>
+        </tr>
+        <tr>
+            <td>63. Nyx</td>
+            <td>Git, Semantic Release</td>
+            <td>Автоматизация семантических версий и changelog для CI/CD.</td>
+        </tr>
+        <tr>
+            <td>64. OpenRewrite</td>
+            <td>Java, Maven, Gradle</td>
+            <td>Рефакторинг кода на основе правил. Поддерживает Java и JS.</td>
+        </tr>
+        <tr>
+            <td>65. Plerion</td>
+            <td>AWS, Wiz, Kubernetes</td>
+            <td>Платформа для анализа безопасности облака и инфраструктуры.</td>
+        </tr>
+        <tr>
+            <td>66. Software engineering agents</td>
+            <td>GitHub Copilot, Cursor, OpenAI</td>
+            <td>Агенты для управления разработкой через AI. Требует осторожности при ревью кода.</td>
+        </tr>
+        <tr>
+            <td>67. Tuple</td>
+            <td>VS Code Live Share, Zoom</td>
+            <td>Инструмент для удаленной парной разработки с упором на приватность.</td>
+        </tr>
+        <tr>
+            <td>68. Turborepo</td>
+            <td>Nx, Lerna, Yarn Workspaces</td>
+            <td>Ускорение сборки монорепозиториев для JavaScript/TypeScript.</td>
+        </tr>
+    </table>
+
+    <!-- Assess -->
+    <h3 class="ring-header">Assess (Оценить)</h3>
+    <table>
+        <tr>
+            <th>Инструмент</th>
+            <th>Связанные инструменты</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>69. AnythingLLM</td>
+            <td>Ollama, LangChain, RAG</td>
+            <td>Локальный LLM-ассистент для работы с документами и агентными workflow.</td>
+        </tr>
+        <tr>
+            <td>70. Gemma Scope</td>
+            <td>TensorFlow, PyTorch, BERT</td>
+            <td>Инструмент для анализа внутренних механизмов моделей Gemma.</td>
+        </tr>
+        <tr>
+            <td>71. Hurl</td>
+            <td>cURL, Postman, HTTPie</td>
+            <td>Инструмент для тестирования API через текстовые файлы с поддержкой ассертов.</td>
+        </tr>
+        <tr>
+            <td>72. Jujutsu</td>
+            <td>Git, Mercurial, Pijul</td>
+            <td>Альтернативный Git-клиент с улучшенным разрешением конфликтов.</td>
+        </tr>
+        <tr>
+            <td>73. kubenetmon</td>
+            <td>Kubernetes, Prometheus, Grafana</td>
+            <td>Мониторинг сетевого трафика в Kubernetes-кластерах.</td>
+        </tr>
+        <tr>
+            <td>74. Mergiraf</td>
+            <td>Git, Merge Conflict Tools</td>
+            <td>Утилита для разрешения конфликтов слияния на основе синтаксических деревьев.</td>
+        </tr>
+        <tr>
+            <td>75. ModernBERT</td>
+            <td>BERT, RoBERTa, Transformers</td>
+            <td>Улучшенная версия BERT с поддержкой длинных контекстов.</td>
+        </tr>
+        <tr>
+            <td>76. OpenRouter</td>
+            <td>OpenAI, Anthropic, LangChain</td>
+            <td>Унифицированный API для работы с множеством LLM-провайдеров.</td>
+        </tr>
+        <tr>
+            <td>77. Redactive</td>
+            <td>Confluence, RAG, LLM</td>
+            <td>Платформа для безопасного использования корпоративных данных в AI-приложениях.</td>
+        </tr>
+        <tr>
+            <td>78. System Initiative</td>
+            <td>Terraform, Ansible, Docker</td>
+            <td>Экспериментальный инструмент для управления инфраструктурой через декларативный подход.</td>
+        </tr>
+        <tr>
+            <td>79. TabPFN</td>
+            <td>Scikit-learn, XGBoost, PyTorch</td>
+            <td>Модель для классификации табличных данных без обучения.</td>
+        </tr>
+        <tr>
+            <td>80. v0</td>
+            <td>Figma, React, Tailwind</td>
+            <td>Генерация фронтенд-кода из дизайнов или скриншотов.</td>
+        </tr>
+        <tr>
+            <td>81. Windsurf</td>
+            <td>Codeium, VS Code, OpenRouter</td>
+            <td>AI-ассистент с поддержкой веб-поиска и DOM-анализа.</td>
+        </tr>
+        <tr>
+            <td>82. YOLO</td>
+            <td>OpenCV, PyTorch, TensorFlow</td>
+            <td>Модель для real-time компьютерного зрения и обработки изображений.</td>
+        </tr>
+    </table>
+
+    <h3 class="ring-header">Hold (Приостановить)</h3>
+    <p>В категории "Hold" для Tools нет упомянутых инструментов.</p>
+</body>
+</html>

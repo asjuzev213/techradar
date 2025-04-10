@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Technology Radar Vol. 32 — Platforms</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        h2 { color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <h1>Technology Radar Vol. 32 (Апрель 2025) — Platforms</h1>
+
+    <h2>Сводка разделов</h2>
+    <h3>Radar at a glance</h3>
+    <p>Радар группирует технологии в четыре кольца: <strong>Adopt</strong> (рекомендуется к внедрению), <strong>Trial</strong> (стоит изучить), <strong>Assess</strong> (требует оценки), <strong>Hold</strong> (следует избегать). Ключевые темы: развитие AI-ассистентов, эволюция наблюдаемости, RAG-технологии и управление данными.</p>
+
+    <h3>Themes</h3>
+    <ul>
+        <li>Супервизорные агенты в кодинг-ассистентах (Cursor, Cline, Windsurf).</li>
+        <li>Наблюдаемость с фокусом на LLM (Weights&Biases, Arize Phoenix).</li>
+        <li>Инновации в RAG: GraphRAG, Fusion-RAG, Self-RAG.</li>
+        <li>Управление данными как продуктом (Data Product Thinking).</li>
+    </ul>
+
+    <h2>Таблицы по кольцам радара</h2>
+
+    <!-- Adopt -->
+    <h3>Adopt (Рекомендуется)</h3>
+    <table>
+        <tr>
+            <th>Платформа</th>
+            <th>Инструменты</th>
+            <th>Краткое описание</th>
+        </tr>
+        <tr>
+            <td>23. GitLab CI/CD</td>
+            <td>SAST, DAST, Kubernetes</td>
+            <td>Интегрированная система CI/CD с поддержкой безопасности и облачных workflow. Включает SAST/DAST-анализ для compliance.</td>
+        </tr>
+        <tr>
+            <td>24. Trino</td>
+            <td>Parquet, Apache Iceberg</td>
+            <td>SQL-движок для анализа данных в распределенных хранилищах. Поддерживает федеративные запросы к данным в S3, HDFS и других.</td>
+        </tr>
+    </table>
+
+    <!-- Trial -->
+    <h3>Trial (Стоит опробовать)</h3>
+    <table>
+        <tr>
+            <th>Платформа</th>
+            <th>Инструменты</th>
+            <th>Краткое описание</th>
+        </tr>
+        <tr>
+            <td>25. ABsmartly</td>
+            <td>Group Sequential Testing (GST)</td>
+            <td>Платформа A/B-тестирования с ускоренной аналитикой результатов (на 80% быстрее традиционных методов).</td>
+        </tr>
+        <tr>
+            <td>26. Dapr</td>
+            <td>mTLS, distroless images</td>
+            <td>Универсальная runtime для микросервисов с акцентом на безопасность (mTLS по умолчанию).</td>
+        </tr>
+        <tr>
+            <td>27. Grafana Alloy</td>
+            <td>OpenTelemetry, Prometheus</td>
+            <td>Telemetry-коллектор для метрик, логов и трейсов в экосистеме Grafana.</td>
+        </tr>
+        <tr>
+            <td>28. Grafana Loki</td>
+            <td>MinIO, S3</td>
+            <td>Лог-агрегатор с низкими затратами на хранение (использует объектное хранилище).</td>
+        </tr>
+        <tr>
+            <td>29. Grafana Tempo</td>
+            <td>Apache Parquet, TraceQL</td>
+            <td>Система распределённого трейсинга с поддержкой OpenTelemetry.</td>
+        </tr>
+        <tr>
+            <td>30. Railway</td>
+            <td>Docker, GitHub</td>
+            <td>PaaS для быстрого деплоя приложений с интеграцией CI/CD.</td>
+        </tr>
+        <tr>
+            <td>31. Unblocked</td>
+            <td>NA, предлагаю: Jira, Confluence</td>
+            <td>AI-ассистент для навигации по legacy-системам и корпоративным данным.</td>
+        </tr>
+        <tr>
+            <td>32. Weights& Biases</td>
+            <td>Weave, Traces</td>
+            <td>Платформа для мониторинга и оптимизации ML-моделей.</td>
+        </tr>
+    </table>
+
+    <!-- Assess -->
+    <h3>Assess (Требует оценки)</h3>
+    <table>
+        <tr>
+            <th>Платформа</th>
+            <th>Инструменты</th>
+            <th>Краткое описание</th>
+        </tr>
+        <tr>
+            <td>33. Arize Phoenix</td>
+            <td>LLM observability</td>
+            <td>Мониторинг производительности LLM-моделей и RAG-систем.</td>
+        </tr>
+        <tr>
+            <td>34. Chainloop</td>
+            <td>OPA, CycloneDX</td>
+            <td>Платформа для управления аттестациями в CI/CD (SLSA Level 3).</td>
+        </tr>
+        <tr>
+            <td>35. Deepseek R1</td>
+            <td>NA, предлагаю: Llama, Qwen</td>
+            <td>Модель с усиленными рассуждающими способностями (MoE, FP8-тренировка).</td>
+        </tr>
+        <tr>
+            <td>36. Deno</td>
+            <td>TypeScript, npm</td>
+            <td>Среда выполнения JavaScript/TypeScript с безопасным sandboxing и нативной поддержкой TS.</td>
+        </tr>
+        <tr>
+            <td>37. Graphiti</td>
+            <td>NA, предлагаю: Neo4j, Hugging Face</td>
+            <td>Динамические knowledge graph'ы для RAG-систем.</td>
+        </tr>
+        <tr>
+            <td>38. Helicone</td>
+            <td>OpenAI, Anthropic</td>
+            <td>LLM-оптимизация с фокусом на cost management и трейсинге.</td>
+        </tr>
+        <tr>
+            <td>39. Humanloop</td>
+            <td>NA, предлагаю: Label Studio</td>
+            <td>Платформа для разработки этичных AI-систем с human-in-the-loop.</td>
+        </tr>
+        <tr>
+            <td>40. Model Context Protocol (MCP)</td>
+            <td>NA, предлагаю: Ollama, OpenRouter</td>
+            <td>Стандарт для интеграции LLM с внешними данными (локальные серверы).</td>
+        </tr>
+        <tr>
+            <td>41. Open WebUI</td>
+            <td>NA, предлагаю: Ollama, Groq</td>
+            <td>Self-hosted AI-платформа с RAG и RBAC.</td>
+        </tr>
+        <tr>
+            <td>42. pg_mooncake</td>
+            <td>Delta Lake, Parquet</td>
+            <td>PostgreSQL-расширение для columnar storage и аналитики.</td>
+        </tr>
+        <tr>
+            <td>43. Reasoning models</td>
+            <td>NA, предлагаю: o1, Gemini 2.0</td>
+            <td>Модели с улучшенными рассуждающими способностями (CoT, ToT).</td>
+        </tr>
+        <tr>
+            <td>44. Restate</td>
+            <td>NA, предлагаю: Temporal</td>
+            <td>Durable execution platform для распределённых систем.</td>
+        </tr>
+        <tr>
+            <td>45. Supabase</td>
+            <td>PostgreSQL, Edge Functions</td>
+            <td>Open-source альтернатива Firebase с поддержкой RLS.</td>
+        </tr>
+        <tr>
+            <td>46. Synthesized</td>
+            <td>NA, предлагаю: Faker</td>
+            <td>Генерация синтетических данных с дифференциальной приватностью.</td>
+        </tr>
+        <tr>
+            <td>47. Tonic.ai</td>
+            <td>NA, предлагаю: Gretel</td>
+            <td>Платформа для создания анонимизированных данных (GDPR/CCPA).</td>
+        </tr>
+        <tr>
+            <td>48. turbopuffer</td>
+            <td>NA, предлагаю: Pinecone</td>
+            <td>Serverless векторный поиск на объектном хранилище.</td>
+        </tr>
+        <tr>
+            <td>49. VectorChord</td>
+            <td>pgvector, RaBitQ</td>
+            <td>PostgreSQL-расширение для эффективного векторного поиска.</td>
+        </tr>
+    </table>
+
+    <!-- Hold -->
+    <h3>Hold (Избегать)</h3>
+    <table>
+        <tr>
+            <th>Платформа</th>
+            <th>Инструменты</th>
+            <th>Краткое описание</th>
+        </tr>
+        <tr>
+            <td>50. Tyk hybrid API management</td>
+            <td>NA</td>
+            <td>Проблемы с поддержкой и документацией в гибридных сценариях.</td>
+        </tr>
+    </table>
+</body>
+</html>
