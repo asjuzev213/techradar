@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Технологический радар. vol 32</title>
+    <title>Защищенный доступ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .content {
+            display: none; /* Скрываем контент по умолчанию */
+        }
+    </style>
 </head>
 <body>
-    <h1>Технологический радар. vol 32</h1>
+    <h1>Доступ к защищенному контенту</h1>
+
+    <!-- Блок для сообщений об ошибках -->
+    <div id="error-message" class="error"></div>
+
+    <!-- Защищенный контент -->
+    <div id="protected-content" class="content">
+        <p>Добро пожаловать! Вы получили доступ к защищенному контенту.</p>
+        <h1>Технологический радар. vol 32</h1>
 
     <h2>О Радаре</h2>
     <p>Thoughtworks создает и делится Technology Radar в поддержку своей миссии по продвижению совершенства в программном обеспечении и трансформации IT. Радар отражает обсуждения Совета по технологиям компании, предоставляя ценную информацию для широкого круга заинтересованных сторон - от разработчиков до CTO.</p>
@@ -37,5 +58,30 @@
         <li><a href="https://chat.qwen.ai/s/227a2c2b-f68f-49fc-918a-25b894021807">Промт для Tools</a></li>
         <li><a href="https://chat.qwen.ai/s/40265ffa-035d-46de-b3e1-f5386bcd240c">Промт для Languages and Frameworks</a></li>
     </ol>
+    </div>
+
+    <script>
+        // Функция для получения параметров из URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Определяем допустимый токен (в реальном проекте это должно быть безопасно!)
+        const validToken = "protected-content_art2"; // Замените на ваш секретный токен
+
+        // Получаем токен из URL
+        const token = getQueryParameter("token");
+
+        // Проверяем токен
+        if (token === validToken) {
+            // Если токен верный, показываем контент
+            document.getElementById("protected-content").style.display = "block";
+        } else {
+            // Если токен неверный или отсутствует, показываем ошибку
+            document.getElementById("error-message").textContent =
+                "Доступ запрещен. Пожалуйста, убедитесь, что вы используете правильную ссылку.";
+        }
+    </script>
 </body>
 </html>
